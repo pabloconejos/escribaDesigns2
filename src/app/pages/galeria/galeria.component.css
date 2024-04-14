@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+.main-titulo{
+    font-size: 12vw;
+    margin-bottom: -10;
+    z-index: 2;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.subtitulo{
+    font-size: 12vw;
+    top: 11vw;
+    z-index: 2;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sliders{
+    margin-top: 30vh;
+}
+
+.titulo {
+    animation: enhance-titulo linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 900px;
+}
+
+@keyframes enhance-titulo {
+    to {
+        scale: 0.1
+    }
+}
+
+  
+@media only screen and (max-width: 767px) {
+    
+    .sliders{
+        margin-top: 12.5vh;
+    }
+}

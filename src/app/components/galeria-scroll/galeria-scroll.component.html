@@ -1,0 +1,40 @@
+<section class="up-slider bg-white flex justify-center items-center flex-col">
+    <section class="flex flex-col justify-center items-center">
+        <article class="text-black flex items-center align-center mt-5">
+            <!--<p class="text-black swipe-txt text-md">Swipe Up!</p>-->
+        </article>
+    </section>
+
+    <div class="p-5" *ngFor="let item of imagenes">
+        <div class="grid grid-cols-1 md:grid-cols-3 py-20">
+            <div class=" text-black font-semibold main-titulo p-5">{{item.titulo}}</div>
+            <div class="img-container" #container>
+                <img [src]="item.src" class="img-ed" #card> 
+            </div>
+            <div class="text-black p-4">
+                <ul>
+                    <li>
+                        <div class="bg-black text-white px-1">Descripcion</div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                             dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+                             non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    </li>
+                    <li>
+                        <div class="bg-black text-white px-1">Categoria</div>
+                        <div>Portadas Musicales</div>
+                    </li>
+                    <li>
+                        <div class="bg-black text-white px-1">Desarrollo</div>
+                        <div>Photoshop</div>
+                    </li>
+                    <li>
+                        <div class="bg-black text-white px-1">S/O</div>
+                        <div>&#64;pabsdalegas</div>
+                    </li>
+                </ul>
+            </div>
+          </div>
+    </div>
+
+</section>
