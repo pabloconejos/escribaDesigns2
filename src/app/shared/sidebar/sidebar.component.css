@@ -1,0 +1,34 @@
+.container-sidebar {
+    position: fixed;
+    z-index: 5;
+    // left: -31vw;
+    left: -610px
+}
+
+.sidebar{
+    height: 98.5vh;
+    // width: 30vw;
+    width: 600px
+}
+
+.button-toogle {
+    width: 75px;
+    height: 75px;
+}
+
+@media only screen and (max-width: 767px) {
+    .sidebar{
+        width: 75vw;
+    }
+
+    .button-toogle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .container-sidebar {
+        position: fixed;
+        z-index: 5;
+        left: -80vw;
+    }
+}

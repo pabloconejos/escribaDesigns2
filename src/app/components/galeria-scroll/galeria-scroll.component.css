@@ -29,6 +29,11 @@
     animation-range: entry 15% cover 25%;
 }
 
+.lista-info{
+    margin: 0 15px 0 15px;
+}
+
+
 @media screen and (min-width: 740px) {
     .card {
       width: 35rem;
@@ -85,6 +90,10 @@
     }
     .sliders{
         margin-top: 10vh;
+    }
+
+    .lista-info{
+        margin: 15px 0 15px 0;
     }
 }
 
