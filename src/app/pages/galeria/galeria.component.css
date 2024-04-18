@@ -35,10 +35,18 @@
     }
 }
 
-  
+
 @media only screen and (max-width: 767px) {
-    
+
     .sliders{
         margin-top: 12.5vh;
     }
+
+  .main-titulo{
+    margin-top: 50px;
+  }
+
+  .subtitulo{
+    margin-top: 50px;
+  }
 }

@@ -8,27 +8,181 @@
 .sidebar{
     height: 98.5vh;
     // width: 30vw;
-    width: 600px
+  width: 600px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 16px;
+
+}
+
+.txt-info {
+}
+
+.sideBar section {
+  width: 100px;
+  height: 100px;
+}
+
+.personal {
+  grid-column: 1 / -1;
+  grid-row: 1 / 5;
+}
+
+.media_1 {
+  grid-row: 5 / 7;
+}
+
+.media_2 {
+  grid-row: 5 / 7;
+}
+
+.contact {
+  grid-column: 1 / -1;
+  grid-row: 7 / 9;
+}
+
+
+.in-personal {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+}
+
+
+.in-personal .main-imagen {
+  grid-column: 1 / 3;
+}
+
+.in-personal .about {
+  grid-column: 3 / -1;
+}
+
+.in-personal .pills {
+  grid-column: 1 / -1;
+}
+
+.in-personal .pills p {
+  font-size: 15px;
 }
 
 .button-toogle {
     width: 75px;
     height: 75px;
 }
+.toogleMobil{
+  display: none;
+}
+
+.in-personal .tools svg , .in-personal .tools img{
+  max-width: 30px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.2s ease;
+}
+
+.in-personal .tools svg:hover , .in-personal .tools img:hover{
+  transform: scale(1.3);
+}
+
 
 @media only screen and (max-width: 767px) {
-    .sidebar{
-        width: 75vw;
-    }
 
-    .button-toogle {
-        width: 40px;
-        height: 40px;
-    }
+  .toogleMobil{
+    display: block;
+    position: fixed;
+  }
 
-    .container-sidebar {
-        position: fixed;
-        z-index: 5;
-        left: -80vw;
-    }
+  .img-hover {
+    display: none;
+  }
+
+  .sidebar{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  }
+
+  .container-sidebar {
+    width: 100vw;
+    left: -100vw;
+  }
+
+  .personal {
+
+  }
+  .media_1 {
+    grid-column: 1 / 4;
+
+  }
+
+  .media_2{
+    grid-column: 4 / 7;
+  }
+
+  .contact{
+    padding: 10px;
+  }
+
+  .in-personal {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .in-personal .about {
+    height: 100%;
+  }
+
+
+  .button-toogle {
+    width: 40px;
+    height: 40px;
+    display: none;
+  }
+
+  .in-personal .pills {
+    display: none;
+  }
+
+  .main-imagen {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .main-imagen img {
+    max-width: 160px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+  }
 }
+
+
+.tooltip {
+  text-decoration: none;
+  position: relative;
+}
+
+.tooltip span {
+  display: none;
+}
+
+.tooltip:hover span {
+  display: block;
+  position: fixed;
+  overflow: hidden;
+}
+
+
+
+
+
