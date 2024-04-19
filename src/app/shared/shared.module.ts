@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import {RouterLink} from "@angular/router";
+import { ModalMailComponent } from './modal-mail/modal-mail.component';
 
 
 
@@ -11,12 +12,14 @@ import {RouterLink} from "@angular/router";
   declarations: [
     HeaderComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    ModalMailComponent
   ],
   exports: [
     HeaderComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    ModalMailComponent
   ],
     imports: [
         CommonModule,

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+
 
 @Component({
   selector: 'app-galeria',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './galeria.component.css'
 })
 export class GaleriaComponent {
+
+
 
 }
