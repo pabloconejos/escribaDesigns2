@@ -60,7 +60,6 @@ export class SidebarComponent implements AfterViewInit{
 
   }
 
-
   openModalMail() {
     const datos = { click: true };
     this.dataService.sendData(datos);

@@ -1,3 +1,35 @@
 .modal-mail {
   bottom: -100vh;
 }
+
+.titulo {
+  top: -200vh;
+  position: absolute;
+}
+
+.main-titulo{
+  font-size: 12vw;
+  z-index: 5;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.subtitulo{
+  font-size: 12vw;
+  top: 11vw;
+  z-index: 99;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.formulario {
+  margin-top: 24rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .formulario {
+    margin: 0;
+  }
+}

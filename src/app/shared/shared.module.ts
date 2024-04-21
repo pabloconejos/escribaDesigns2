@@ -5,6 +5,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import {RouterLink} from "@angular/router";
 import { ModalMailComponent } from './modal-mail/modal-mail.component';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -23,7 +24,8 @@ import { ModalMailComponent } from './modal-mail/modal-mail.component';
   ],
     imports: [
         CommonModule,
-        RouterLink
+        RouterLink,
+        FormsModule
     ]
 })
 export class SharedModule { }

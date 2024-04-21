@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-.modal-mail {
-  bottom: -100vh;
-}
+
 
 .main-titulo{
     font-size: 12vw;
     margin-bottom: -10px;
-    z-index: 2;
+    z-index: 5;
     font-family: "Anton", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -16,7 +14,7 @@
 .subtitulo{
     font-size: 12vw;
     top: 11vw;
-    z-index: 2;
+    z-index: 99;
     font-family: "Anton", sans-serif;
     font-weight: 400;
     font-style: normal;
