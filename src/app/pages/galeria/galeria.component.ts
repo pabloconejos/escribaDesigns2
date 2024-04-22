@@ -25,7 +25,10 @@ export class GaleriaComponent implements OnInit{
     this.dataSubscriptionModal = this.dataService.getCerrarModal().subscribe(data => {
       console.log(data)
       if (data) {
-        this.titulo!.nativeElement.style.transform = "translateY(0)";
+        setTimeout(()=> {
+          this.titulo!.nativeElement.style.transform = "translateY(0)";
+        },400)
+
       }
     });
   }

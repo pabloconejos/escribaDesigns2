@@ -31,7 +31,7 @@ export class ModalMailComponent {
 
       setTimeout(()=>{
         this.handlerTittle();
-      },500)
+      },200)
     });
   }
 
@@ -65,7 +65,7 @@ export class ModalMailComponent {
     this.titulo!.nativeElement.style.transition = "top 0.8s ease";
     var screenWidth = window.innerWidth;
     if (screenWidth <= 767) {
-      this.titulo!.nativeElement.style.top = "55px";
+      this.titulo!.nativeElement.style.top = "100px";
     } else {
       this.titulo!.nativeElement.style.top = "0";
     }
