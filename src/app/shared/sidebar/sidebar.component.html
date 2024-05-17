@@ -128,7 +128,7 @@
 </div>
 
 
-<div (click)="toogleSideBar()"
+<!--<div (click)="toogleSideBar()"
      class="cursor-pointer rounded-lg backdrop-blur-md shadow-white/10 overflow-hiddenn m-2 text-white absolute z-10 toogleMobil m-3 bg-white/10">
   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44"
        viewBox="0 0 24 24" stroke-width="1.5"
@@ -138,9 +138,18 @@
     <path d="M4 12l16 0"/>
     <path d="M4 18l16 0"/>
   </svg>
+</div>-->
+
+<div (click)="toogleSideBar()" class="main cursor-pointer absolute z-50 toogleMobil m-3">
+  <label class="menu-button-wrapper">
+    <input type="checkbox" class="menu-button">
+    <div class="icon-wrapper">
+      <label class="hamburger">
+        <input class="hamburger-input" type="checkbox">
+        <span class="hamburger-line first"></span>
+        <span class="hamburger-line second"></span>
+        <span class="hamburger-line third"></span>
+      </label>
+    </div>
+  </label>
 </div>
-
-
-<!--
-
--->

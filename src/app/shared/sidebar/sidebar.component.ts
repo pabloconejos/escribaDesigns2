@@ -61,20 +61,25 @@ export class SidebarComponent implements AfterViewInit{
   }
 
   toogleSideBar() {
-    var screenWidth = window.innerWidth;
-    this.sideBar!.nativeElement.style.transition = "all 0.5s ease";
-    this.toogle = !this.toogle;
-    if(this.toogle) {
-      this.sideBar!.nativeElement.style.left = 0;
-    } else {
-
-      if (screenWidth <= 767) {
-        this.sideBar!.nativeElement.style.left = '-100vw';
+    if (!this.dataService.mailOpen) {
+      var screenWidth = window.innerWidth;
+      this.sideBar!.nativeElement.style.transition = "all 0.5s ease";
+      this.toogle = !this.toogle;
+      if(this.toogle) {
+        this.sideBar!.nativeElement.style.left = 0;
       } else {
-        this.sideBar!.nativeElement.style.left = '-610px';
-      }
 
+        if (screenWidth <= 767) {
+          this.sideBar!.nativeElement.style.left = '-100vw';
+        } else {
+          this.sideBar!.nativeElement.style.left = '-610px';
+        }
+
+      }
+    } else {
+      this.dataService.sendMailModal(true)
     }
+
 
   }
 
@@ -82,6 +87,7 @@ export class SidebarComponent implements AfterViewInit{
     const datos = { click: true };
     this.dataService.sendData(datos);
     this.toogleSideBar();
+    this.dataService.mailOpen = true;
   }
 
 

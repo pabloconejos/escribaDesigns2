@@ -15,6 +15,7 @@ export class ModalMailComponent {
 
   datos: any;
   dataSubscription: any;
+  mailSubscription: any;
 
   email: any;
   first_name: any;
@@ -22,22 +23,22 @@ export class ModalMailComponent {
   message: any;
 
   constructor(private dataService: DataServiceService) {
+
     this.dataSubscription = this.dataService.getData().subscribe(data => {
       this.datos = data;
       if (data.click) { this.handlerModal('mostrar')  }
-
-      console.log(data)
-
-
       setTimeout(()=>{
         this.handlerTittle();
       },200)
     });
+
+    this.mailSubscription = this.dataService.getmailModal().subscribe( data => {
+      this.handlerModal('ocultar');
+      this.dataService.mailOpen = false
+    })
+
   }
 
-  ngOnDestroy() {
-    this.dataSubscription.unsubscribe();
-  }
 
   handlerModal(tipo: any) {
 
