@@ -10,8 +10,6 @@ export class DataServiceService {
 
   private dataSubject = new Subject<any>();
   private cerrarModalSubject = new Subject<any>();
-  private mailModal = new Subject<any>();
-  public mailOpen: boolean = false
 
   sendData(data: any) {
     this.dataSubject.next(data);
@@ -27,14 +25,5 @@ export class DataServiceService {
   getCerrarModal(): Observable<any> {
     return this.cerrarModalSubject.asObservable();
   }
-
-  sendmailModall(data: any) {
-    this.mailModal.next(data);
-  }
-  getmailModal(): Observable<any> {
-    return this.mailModal.asObservable();
-  }
-
-
 
 }

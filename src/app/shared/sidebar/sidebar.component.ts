@@ -61,32 +61,27 @@ export class SidebarComponent implements AfterViewInit{
   }
 
   toogleSideBar() {
-    if (!this.dataService.mailOpen) {
-      var screenWidth = window.innerWidth;
-      this.sideBar!.nativeElement.style.transition = "all 0.5s ease";
-      this.toogle = !this.toogle;
-      if(this.toogle) {
-        this.sideBar!.nativeElement.style.left = 0;
-      } else {
-
-        if (screenWidth <= 767) {
-          this.sideBar!.nativeElement.style.left = '-100vw';
-        } else {
-          this.sideBar!.nativeElement.style.left = '-610px';
-        }
-
-      }
+    var screenWidth = window.innerWidth;
+    this.sideBar!.nativeElement.style.transition = "all 0.5s ease";
+    this.toogle = !this.toogle;
+    if(this.toogle) {
+      this.sideBar!.nativeElement.style.left = 0;
     } else {
-      console.log('Toca Cerrar Modal Mail')
-      this.dataService.sendmailModall(true);
+
+      if (screenWidth <= 767) {
+        this.sideBar!.nativeElement.style.left = '-100vw';
+      } else {
+        this.sideBar!.nativeElement.style.left = '-610px';
+      }
+
     }
+
   }
 
   openModalMail() {
     const datos = { click: true };
     this.dataService.sendData(datos);
     this.toogleSideBar();
-    this.dataService.mailOpen = true;
   }
 
 

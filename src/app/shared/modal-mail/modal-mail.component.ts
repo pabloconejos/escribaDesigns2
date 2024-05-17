@@ -8,14 +8,13 @@ import {first} from "rxjs";
   templateUrl: './modal-mail.component.html',
   styleUrl: './modal-mail.component.css'
 })
-export class ModalMailComponent{
+export class ModalMailComponent {
 
   @ViewChild('modal_mail') modal_mail: ElementRef | undefined;
   @ViewChild('titulo') titulo: ElementRef | undefined;
 
   datos: any;
   dataSubscription: any;
-  mailSubscription: any;
 
   email: any;
   first_name: any;
@@ -26,23 +25,18 @@ export class ModalMailComponent{
     this.dataSubscription = this.dataService.getData().subscribe(data => {
       this.datos = data;
       if (data.click) { this.handlerModal('mostrar')  }
+
       console.log(data)
+
+
       setTimeout(()=>{
         this.handlerTittle();
       },200)
     });
-
-
-    this.mailSubscription = this.dataService.getmailModal().subscribe(data => {
-      if (data) {
-        this.handlerModal('ocultar')
-      }
-    })
   }
 
-  hidden() {
-
-    this.dataService.mailOpen = false
+  ngOnDestroy() {
+    this.dataSubscription.unsubscribe();
   }
 
   handlerModal(tipo: any) {
@@ -57,7 +51,7 @@ export class ModalMailComponent{
         this.modal_mail!.nativeElement.style.transition = "bottom 0.5s ease";
         this.modal_mail!.nativeElement.style.bottom = '-100vh';
         this.dataService.sendCerrarModal(true);
-        this.hidden()
+
         setTimeout(()=>{
           this.titulo!.nativeElement.style.opacity = "0";
           this.titulo!.nativeElement.style.top = "-200vh";

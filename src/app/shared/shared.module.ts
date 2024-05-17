@@ -6,7 +6,6 @@ import { FooterComponent } from './footer/footer.component';
 import {RouterLink} from "@angular/router";
 import { ModalMailComponent } from './modal-mail/modal-mail.component';
 import {FormsModule} from "@angular/forms";
-import { ButtonMenuComponent } from './button-menu/button-menu.component';
 
 
 
@@ -15,8 +14,7 @@ import { ButtonMenuComponent } from './button-menu/button-menu.component';
     HeaderComponent,
     SidebarComponent,
     FooterComponent,
-    ModalMailComponent,
-    ButtonMenuComponent
+    ModalMailComponent
   ],
   exports: [
     HeaderComponent,
