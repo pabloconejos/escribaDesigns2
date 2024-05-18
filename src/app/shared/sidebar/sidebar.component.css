@@ -28,9 +28,7 @@
   display: none;
 }
 
-.svg-section {
 
-}
 
 .ig-svg {
   padding: 30px;
@@ -73,7 +71,20 @@
   background: white;
 }
 
+.svg-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.txt-contact{
+  display: none;
+}
+
 @media only screen and (max-width: 767px) {
+  .txt-contact{
+    display: block;
+  }
 
   .toogleMobil{
     display: block;
@@ -97,6 +108,11 @@
 
   .pill-work-text{
     font-size: 10px;
+  }
+
+  .ig-svg {
+    width: 150px;
+    height: 150px;
   }
 
 }

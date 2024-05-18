@@ -85,8 +85,7 @@
         border: solid 2px white;
         z-index: 3;
         border-radius: 20px;
-        animation: totopMobile linear both;
-        animation-timeline: scroll();
+        top: 90vh;
     }
     .sliders{
         margin-top: 10vh;

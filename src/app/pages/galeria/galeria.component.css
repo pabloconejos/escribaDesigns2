@@ -25,15 +25,17 @@
 }
 
 .titulo {
-    animation: enhance-titulo linear both;
+    scale: 1;
+    animation: enhance-titulo linear;
     animation-timeline: scroll(root block);
     animation-range: 0 900px;
 }
 
 @keyframes enhance-titulo {
-    to {
-        scale: 0.1
-    }
+
+  to {
+    scale: 0.1
+  }
 }
 
 

@@ -8,7 +8,7 @@
 
     <div class="p-5" *ngFor="let item of imagenes">
         <div class="grid grid-cols-1 md:grid-cols-3 py-10">
-            <div class=" text-black font-semibold main-titulo p-5">{{item.titulo}}</div>
+            <div class=" text-black font-semibold main-titulo pt-5 pb-5">{{item.titulo}}</div>
             <div class="img-container" #container>
                 <img [src]="item.src" class="img-ed" #card>
             </div>

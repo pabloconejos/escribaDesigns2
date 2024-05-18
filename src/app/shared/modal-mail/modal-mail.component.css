@@ -33,6 +33,11 @@
   .formulario {
     margin: 0;
   }
+
+  .close{
+    display: none;
+  }
+
 }
 
 .disabled {
