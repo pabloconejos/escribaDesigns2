@@ -1,20 +1,7 @@
 .container-sidebar {
     position: fixed;
     z-index: 5;
-    // left: -31vw;
     left: -610px
-}
-
-.sidebar2{
-    height: 98.5vh;
-    // width: 30vw;
-    width: 600px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 16px;
-  padding: 16px;
 }
 
 .sidebar{
@@ -22,63 +9,15 @@
   width: 600px;
   gap: 16px;
   padding: 16px;
-
-
-
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-
-.txt-info {
-}
 
 .sideBar section {
   width: 100px;
   height: 100px;
-}
-
-.personal {
-  grid-column: 1 / -1;
-  grid-row: 1 / 5;
-}
-
-.media_1 {
-  grid-row: 5 / 7;
-}
-
-.media_2 {
-  grid-row: 5 / 7;
-}
-
-.contact {
-  grid-column: 1 / -1;
-  grid-row: 7 / 9;
-}
-
-
-.in-personal {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 16px;
-}
-
-
-.in-personal .main-imagen {
-  grid-column: 1 / 3;
-}
-
-.in-personal .about {
-  grid-column: 3 / -1;
-}
-
-.in-personal .pills {
-  grid-column: 1 / -1;
-}
-
-.in-personal .pills p {
-  font-size: 1vh;
 }
 
 .button-toogle {
@@ -89,17 +28,50 @@
   display: none;
 }
 
-.in-personal .tools svg , .in-personal .tools img{
-  max-width: 30px;
-  max-height: 30px;
-  aspect-ratio: 1 / 1;
-  transition: transform 0.2s ease;
+.svg-section {
+
 }
 
-.in-personal .tools svg:hover , .in-personal .tools img:hover{
-  transform: scale(1.3);
+.ig-svg {
+  padding: 30px;
+  margin-right: 10px;
 }
 
+.ubi-svg{
+  padding: 30px;
+  margin-left: 10px;
+}
+
+.ig-svg svg{
+
+}
+
+.ubi-svg svg{
+
+}
+
+.img-tool {
+  width: 55px;
+  height: 55px;
+}
+
+.pills-tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Ajusta el valor de 100px al tamaño deseado */
+  grid-auto-rows: 80px; /* Ajusta este valor al tamaño deseado */
+  gap: 10px; /* Espacio entre celdas, opcional */
+}
+
+.blender-item {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 4px;
+  background: white;
+}
 
 @media only screen and (max-width: 767px) {
 
@@ -112,43 +84,10 @@
     display: none;
   }
 
-  .sidebar{
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-
-  }
-
   .container-sidebar {
     width: 100vw;
     left: -100vw;
   }
-
-  .personal {
-
-  }
-  .media_1 {
-    grid-column: 1 / 4;
-  }
-
-  .media_2{
-    grid-column: 4 / 7;
-  }
-
-  .contact{
-    padding: 10px;
-  }
-
-  .in-personal {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .in-personal .about {
-    height: 100%;
-  }
-
 
   .button-toogle {
     width: 40px;
@@ -156,40 +95,10 @@
     display: none;
   }
 
-  .in-personal .pills {
-    display: none;
+  .pill-work-text{
+    font-size: 10px;
   }
 
-  .main-imagen {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  .main-imagen img {
-    max-width: 160px;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-  }
-}
-
-
-
-.tooltip {
-  text-decoration: none;
-  position: relative;
-}
-
-.tooltip span {
-  display: none;
-}
-
-.tooltip:hover span {
-  display: block;
-  position: fixed;
-  overflow: hidden;
 }
 
 

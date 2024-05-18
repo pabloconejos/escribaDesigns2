@@ -2,6 +2,8 @@ import {Component, ElementRef, signal, ViewChild} from '@angular/core';
 import {DataServiceService} from "../../services/data-service.service";
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import {first} from "rxjs";
+import {environment} from "../../../environments/environment";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-modal-mail',
@@ -73,16 +75,19 @@ export class ModalMailComponent {
 
   }
 
-  public sendEmail(e: Event) {
-    e.preventDefault();
 
+
+  sendEmail(e: Event) {
+    e.preventDefault();
+    console.log(e.target)
     emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target as HTMLFormElement, {
-        publicKey: 'YOUR_PUBLIC_KEY',
+      .sendForm(environment.EMAIL_SERVICE_ID, environment.EMAIL_TEMPLATE_ID, e.target as HTMLFormElement, {
+        publicKey: environment.EMAIL_PUBLIC_KEY,
       })
       .then(
         () => {
           console.log('SUCCESS!');
+          this.cleanForm();
         },
         (error) => {
           console.log('FAILED...', (error as EmailJSResponseStatus).text);
@@ -91,4 +96,10 @@ export class ModalMailComponent {
   }
 
 
+  private cleanForm() {
+    this.message = '';
+    this.first_name = '';
+    this.last_name = '';
+    this.email = '';
+  }
 }
