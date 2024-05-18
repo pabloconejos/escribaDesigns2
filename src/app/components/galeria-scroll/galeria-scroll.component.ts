@@ -201,12 +201,6 @@ export class GaleriaScrollComponent implements AfterViewInit, OnInit{
   @ViewChildren('card') cards: QueryList<ElementRef> | undefined;
   @ViewChildren('container') containers: QueryList<ElementRef> | undefined;
 
-
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: Event) {
-    console.log(event);
-  }
-
   constructor() { }
   ngOnInit(): void {
   }

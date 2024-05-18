@@ -1,4 +1,4 @@
-<div #sidebar class="container-sidebar flex items-center justify-center">
+<div #sidebar class="container-sidebar flex items-center justify-center" *ngIf="false">
 
   <article
     class="sidebar rounded-lg backdrop-blur-md border-black/10 shadow-inner shadow-white/10 overflow-hiddenn m-2">
@@ -109,38 +109,40 @@
 
 
     </section>
-    </article>
+  </article>
 
-    <div (click)="toogleSideBar()" #btnToggle class="button-toogle rounded-lg
-        backdrop-blur-md border
-        border-black/10 shadow-inner
-        shadow-white/10 overflow-hiddenn m-2 text-white flex items-center justify-center bg-white/5 cursor-pointer">
-
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44"
-           viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
-           stroke-linejoin="round" style="color: black;">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <path d="M9 6l6 6l-6 6"/>
-      </svg>
-    </div>
+  <div (click)="toogleSideBar()" #btnToggle class="button-toogle rounded-lg backdrop-blur-md border border-black/10 shadow-inner shadow-white/10 overflow-hiddenn m-2 text-white flex items-center justify-center bg-white/5 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44"
+         viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
+         stroke-linejoin="round" style="color: black;">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M9 6l6 6l-6 6"/>
+    </svg>
+  </div>
 
 
 </div>
 
 
-<!--<div (click)="toogleSideBar()"
-     class="cursor-pointer rounded-lg backdrop-blur-md shadow-white/10 overflow-hiddenn m-2 text-white absolute z-10 toogleMobil m-3 bg-white/10">
-  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44"
-       viewBox="0 0 24 24" stroke-width="1.5"
-       stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-    <path d="M4 6l16 0"/>
-    <path d="M4 12l16 0"/>
-    <path d="M4 18l16 0"/>
-  </svg>
-</div>-->
 
-<div (click)="toogleSideBar()" class="main cursor-pointer absolute z-50 toogleMobil m-3">
+<div #sidebar class="container-sidebar flex items-center justify-center" >
+  <article class="sidebar rounded-lg backdrop-blur-md border-black/10 shadow-inner shadow-white/10 overflow-hiddenn m-2">
+    <img class="rounded-lg aspect-square" src="../../../assets/otros/perfil.jpg" alt="">
+  </article>
+  <div (click)="toogleSideBar()" #btnToggle class="button-toogle rounded-lg backdrop-blur-md border border-black/10 shadow-inner shadow-white/10 overflow-hiddenn m-2 text-white flex items-center justify-center bg-white/5 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44"
+         viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
+         stroke-linejoin="round" style="color: black;">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M9 6l6 6l-6 6"/>
+    </svg>
+  </div>
+
+
+</div>
+
+
+<div (click)="toogleSideBar()" class="main cursor-pointer absolute z-50 toogleMobil m-3 ">
   <label class="menu-button-wrapper">
     <input type="checkbox" class="menu-button">
     <div class="icon-wrapper">

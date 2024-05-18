@@ -5,18 +5,28 @@
     left: -610px
 }
 
-.sidebar{
+.sidebar2{
     height: 98.5vh;
     // width: 30vw;
-  width: 600px;
+    width: 600px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 16px;
   padding: 16px;
+}
+
+.sidebar{
+  height: 98.5vh;
+  width: 600px;
+  gap: 16px;
+  padding: 16px;
+
+
 
 }
+
 
 .txt-info {
 }
@@ -210,6 +220,12 @@ html, body {
   justify-content: space-between;
   cursor: pointer;
   padding: 20px;
+  outline: 0;
+  border-radius: 0;
+  animation: hamburguer-transition linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 800px;
+
 
   /* BUTTON */
   html, body {
@@ -225,8 +241,9 @@ html, body {
 
   .main {
     text-align: center;
-
   }
+
+
 
   .hamburger {
     position: relative;
@@ -440,6 +457,17 @@ html, body {
 
   &:checked ~ .icon-wrapper .hamburger:before {
     transform: rotate(45deg);
+  }
+}
+
+
+@keyframes hamburguer-transition {
+  to {
+    border-radius: .5rem;
+    background-color: rgb(0 0 0 / 0.4);
+    --tw-backdrop-blur: blur(8px);
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+
   }
 }
 

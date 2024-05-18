@@ -44,11 +44,6 @@ export class SidebarComponent implements AfterViewInit{
         'identidad visual de los cantantes del género urbano.'
     }
   }
-
-  ngAfterViewInit(): void {
-    this.tooltips = Array.from(document.querySelectorAll('.tooltip span'));
-  }
-
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
     const x = (event.clientX + 20) + 'px';
@@ -58,6 +53,18 @@ export class SidebarComponent implements AfterViewInit{
       this.renderer.setStyle(tooltip, 'top', y);
       this.renderer.setStyle(tooltip, 'left', x);
     });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+
+    if (window.scrollY >= 694) {
+
+    }
+  }
+
+  ngAfterViewInit(): void {
+    this.tooltips = Array.from(document.querySelectorAll('.tooltip span'));
   }
 
   toogleSideBar() {
