@@ -204,10 +204,10 @@ export class GaleriaScrollComponent implements AfterViewInit, OnInit{
   constructor() { }
   ngOnInit(): void {
   }
-  positionTop: number = 100; // start at 100vh
-
 
   ngAfterViewInit() {
+
+
 
     if (this.cards && this.containers) {
       this.cards.forEach((card, index) => {
