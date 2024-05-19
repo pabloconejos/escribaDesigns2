@@ -8,6 +8,7 @@ import {
   ViewChild,
   ViewChildren
 } from '@angular/core';
+import {EdService} from "../../services/ed.service";
 
 @Component({
   selector: 'app-galeria-scroll',
@@ -142,12 +143,17 @@ export class GaleriaScrollComponent implements AfterViewInit, OnInit{
     },
 
   ];
+  images2: any[] = []
 
   @ViewChildren('card') cards: QueryList<ElementRef> | undefined;
   @ViewChildren('container') containers: QueryList<ElementRef> | undefined;
 
-  constructor() { }
+  constructor(private edService: EdService) { }
   ngOnInit(): void {
+    this.edService.getDesigns().subscribe((response) => {
+      console.log(response)
+      this.images2 = response
+    })
   }
   positionTop: number = 100; // start at 100vh
 
