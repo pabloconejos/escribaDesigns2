@@ -153,17 +153,25 @@ export class GaleriaScrollComponent implements AfterViewInit, OnInit{
     this.edService.getDesigns().subscribe((response) => {
       console.log(response)
       this.images2 = response
+      setTimeout(()=> {
+        this.animatedImg()
+      },10)
+
     })
   }
-  positionTop: number = 100; // start at 100vh
+
 
 
   ngAfterViewInit() {
 
+
+  }
+
+  animatedImg() {
     if (this.cards && this.containers) {
+      console.log(this.cards)
       this.cards.forEach((card, index) => {
         const container = this.containers!.toArray()[index].nativeElement;
-
         // Moving animation event
         container.addEventListener("mousemove", (e: any) => {
           let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
@@ -188,7 +196,7 @@ export class GaleriaScrollComponent implements AfterViewInit, OnInit{
   }
 
 
-
-
-
+  img64(imagen_base64: any) {
+    return 'data:image/jpeg;base64,' + imagen_base64
+  }
 }
