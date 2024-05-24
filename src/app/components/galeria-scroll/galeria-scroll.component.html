@@ -1,12 +1,12 @@
 <section class="up-slider bg-white flex justify-center items-center flex-col">
 
-    <section class="flex flex-col justify-center items-center pt-2">
+  <section class="flex flex-col justify-center items-center pt-2">
         <article class="text-black flex items-center align-center mt-5">
             <p class="text-black swipe-txt text-md font-semibold">Swipe Up!</p>
         </article>
     </section>
 
-    <div class="p-5" *ngFor="let item of imagenes">
+  <!--<div class="p-5" *ngFor="let item of imagenes">
         <div class="grid grid-cols-1 md:grid-cols-3 py-10">
             <div class=" text-black font-semibold main-titulo pt-5 pb-5">{{item.titulo}}</div>
             <div class="img-container" #container>
@@ -33,6 +33,36 @@
                 </ul>
             </div>
           </div>
+    </div>-->
+  <div *ngFor="let item of images2" class="p-5">
+    <div class="grid grid-cols-1 md:grid-cols-3 py-10">
+      <div class=" text-black font-semibold main-titulo pt-5 pb-5">{{ item.title }}</div>
+
+      <div class="img-container" #container>
+        <img [src]="img64(item.imagen_base64)" class="img-ed" #card alt="">
+      </div>
+      <div class="text-black lista-info">
+        <ul>
+          <li>
+            <div class="bg-black text-white px-1">Descripcion</div>
+            <div>{{ item.description }}</div>
+          </li>
+          <li>
+            <div class="bg-black text-white px-1">Categoria</div>
+            <div>{{ item.category }}</div>
+          </li>
+          <li>
+            <div class="bg-black text-white px-1">Desarrollo</div>
+            <div>{{ item.development }}</div>
+          </li>
+          <li>
+            <div class="bg-black text-white px-1">S/O</div>
+            <div>{{ item.thanksTo }}</div>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>->>
+
 
 </section>
