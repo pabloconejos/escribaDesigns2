@@ -33,11 +33,33 @@
     margin: 0 15px 0 15px;
 }
 
+.loader{
+  gap: 124px;
+}
+
+.img-container-skeleton{
+  width: 25vw;
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
 
 @media screen and (min-width: 740px) {
     .card {
       width: 35rem;
     }
+
+}
+@media screen and (max-width: 767px) {
+  .loader{
+    gap: 0;
+  }
+
+  .img-container-skeleton{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
 }
 
 @keyframes reveal {
@@ -85,7 +107,7 @@
         border: solid 2px white;
         z-index: 3;
         border-radius: 20px;
-        top: 90vh;
+        top: 76vh;
     }
     .sliders{
         margin-top: 10vh;
