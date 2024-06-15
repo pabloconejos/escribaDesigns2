@@ -8,4 +8,6 @@ export interface Design {
   development: string[]
   thanksto: string[]
   imagen_base64: string
+  url_s3: string
+  uri_s3: string
 }

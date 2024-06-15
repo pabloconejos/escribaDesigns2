@@ -150,6 +150,7 @@ export class GaleriaScrollComponent implements AfterViewInit, OnInit{
 
   constructor(private edService: EdService) { }
   ngOnInit(): void {
+
     this.edService.getDesigns().subscribe((response) => {
       console.log(response)
       this.images2 = response
