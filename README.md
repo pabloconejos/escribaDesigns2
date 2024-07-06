@@ -13,7 +13,8 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#credits">Credits</a> •
+  <a href="#others">Other</a> •
+   <a href="#credits">Credits</a> •
 </p>
 
 ![screenshot](./src/assets/otros/1716820618445.jpeg)
