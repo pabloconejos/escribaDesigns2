@@ -23,6 +23,10 @@
 * You can see Escriba´s designs
 * You can text Escriba by email
 
+## Other
+
+- This project also has a back office in Angular and an API in Nest so that the client can manage and edit their website.
+
 ## Credits
 
 This software uses the following open source packages:
