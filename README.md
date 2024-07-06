@@ -16,7 +16,7 @@
   <a href="#credits">Credits</a> •
 </p>
 
-![screenshot](./templatemns.png)
+![screenshot](./src/assets/otros/1716820618445.jpg)
 
 ## Key Features
 
