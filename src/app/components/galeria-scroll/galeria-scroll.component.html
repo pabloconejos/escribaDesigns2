@@ -11,7 +11,7 @@
       <div class=" text-black font-semibold main-titulo pt-5 pb-5">{{ item.title }}</div>
 
       <div class="img-container" #container>
-        <img [src]="item.url_s3" class="img-ed" #card alt="">
+        <img [src]="item.url_s3" class="img-ed" #card [alt]="item.description">
       </div>
       <div class="text-black lista-info">
         <ul>

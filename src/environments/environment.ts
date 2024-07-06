@@ -1,5 +1,6 @@
 export const environment = {
-  EMAIL_SERVICE_ID: 'service_66rsx7w',
-  EMAIL_TEMPLATE_ID: 'template_fmjqfsj',
-  EMAIL_PUBLIC_KEY: '3uPsLcFlrjABa-kaL'
+  EMAIL_SERVICE_ID: '',
+  EMAIL_TEMPLATE_ID: '',
+  EMAIL_PUBLIC_KEY: '',
+  URI: 'https://escriba-designs-back.vercel.app/ed-designs'
 };

@@ -7,16 +7,11 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { PagesComponent } from './pages.component';
 
 const routes: Routes = [
-    
-    { 
-        path: '', 
+
+    {
+        path: '',
         component: PagesComponent,
-        children: [
-            { path: 'galeria', component: GaleriaComponent },
-            { path: 'destacados', component: DestacadosComponent },
-            { path: 'contacto', component: ContactoComponent },
-            { path: '', redirectTo: '/galeria', pathMatch: 'full' },
-        ]
+        loadChildren: () => import('./child-routes.module').then( m => m.ChildRoutesModule)
     },
 
 ];

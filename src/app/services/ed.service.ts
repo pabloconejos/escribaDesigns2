@@ -9,7 +9,6 @@ import {Designs} from "../common/degings";
 export class EdService {
 
   private URI = 'https://escriba-designs-back.vercel.app/ed-designs';
-  // private URI = 'https://localhost:3000';
 
   constructor(private http: HttpClient) { }
 
