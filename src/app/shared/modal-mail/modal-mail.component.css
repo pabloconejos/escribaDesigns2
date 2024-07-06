@@ -8,7 +8,7 @@
 }
 
 .main-titulo{
-  font-size: 12vw;
+  font-size: 11vw;
   z-index: 5;
   font-family: "Anton", sans-serif;
   font-weight: 400;
@@ -16,7 +16,7 @@
 }
 
 .subtitulo{
-  font-size: 12vw;
+  font-size: 11vw;
   top: 11vw;
   z-index: 99;
   font-family: "Anton", sans-serif;

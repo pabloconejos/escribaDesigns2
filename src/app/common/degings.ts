@@ -6,6 +6,8 @@ export interface Design {
   description: string
   category: string[]
   development: string[]
-  thanksTo: string[]
+  thanksto: string[]
   imagen_base64: string
+  url_s3: string
+  uri_s3: string
 }

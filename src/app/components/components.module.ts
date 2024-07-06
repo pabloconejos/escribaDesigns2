@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SliderLeftComponent } from './slider-left/slider-left.component';
 import { SliderRightComponent } from './slider-right/slider-right.component';
 import { GaleriaScrollComponent } from './galeria-scroll/galeria-scroll.component';
+import {NgxSkeletonLoaderModule} from "ngx-skeleton-loader";
 
 
 @NgModule({
@@ -16,8 +17,9 @@ import { GaleriaScrollComponent } from './galeria-scroll/galeria-scroll.componen
     SliderLeftComponent,
     GaleriaScrollComponent
   ],
-  imports: [
-    CommonModule
-  ]
+    imports: [
+        CommonModule,
+        NgxSkeletonLoaderModule
+    ]
 })
 export class ComponentsModule { }

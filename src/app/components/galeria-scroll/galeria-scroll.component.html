@@ -6,40 +6,12 @@
         </article>
     </section>
 
-  <!--<div class="p-5" *ngFor="let item of imagenes">
-        <div class="grid grid-cols-1 md:grid-cols-3 py-10">
-            <div class=" text-black font-semibold main-titulo pt-5 pb-5">{{item.titulo}}</div>
-            <div class="img-container" #container>
-                <img [src]="item.src" class="img-ed" #card>
-            </div>
-            <div class="text-black lista-info">
-                <ul>
-                    <li>
-                        <div class="bg-black text-white px-1">Descripcion</div>
-                        <div>{{item.descripcion}}</div>
-                    </li>
-                    <li>
-                        <div class="bg-black text-white px-1">Categoria</div>
-                        <div>Portadas Musicales</div>
-                    </li>
-                    <li>
-                        <div class="bg-black text-white px-1">Desarrollo</div>
-                        <div>Photoshop</div>
-                    </li>
-                    <li>
-                        <div class="bg-black text-white px-1">S/O</div>
-                        <div>{{item.s_o}}</div>
-                    </li>
-                </ul>
-            </div>
-          </div>
-    </div>-->
   <div *ngFor="let item of images2" class="p-5">
     <div class="grid grid-cols-1 md:grid-cols-3 py-10">
       <div class=" text-black font-semibold main-titulo pt-5 pb-5">{{ item.title }}</div>
 
       <div class="img-container" #container>
-        <img [src]="img64(item.imagen_base64)" class="img-ed" #card alt="">
+        <img [src]="item.url_s3" class="img-ed" #card [alt]="item.description">
       </div>
       <div class="text-black lista-info">
         <ul>
@@ -57,12 +29,157 @@
           </li>
           <li>
             <div class="bg-black text-white px-1">S/O</div>
-            <div>{{ item.thanksTo }}</div>
+            <div>{{ item.thanksto }}</div>
           </li>
         </ul>
       </div>
     </div>
-  </div>->>
+  </div>
+  @if (images2.length <= 0) {
+    <div class="w-full">
+      @for (user of [1,1,1]; track user) {
+        <div class="loader grid grid-cols-1 md:grid-cols-3 p-10">
+          <div class="flex flex-col">
+            <ngx-skeleton-loader
+              count="1"
+              appearance="line"
+              class="text-black font-semibold"
+              [theme]="{
+            'width': '100%',
+            'height': '20px',
+            'border-radius': '4px',
+          }">
+            </ngx-skeleton-loader>
+            <ngx-skeleton-loader
+              count="1"
+              appearance="line"
+              class="text-black font-semibold"
+              [theme]="{
+            'width': '100%',
+            'height': '20px',
+            'border-radius': '4px',
+          }">
+            </ngx-skeleton-loader>
+          </div>
+          <div class="img-container-skeleton" #container>
+            <ngx-skeleton-loader
+              class="rounded-lg"
+              count="1"
+              appearance="line"
+              [theme]="{
+              'width': '100%',
+              'height': '100%',
+            }">
+            </ngx-skeleton-loader>
+          </div>
+          <div class="text-black lista-info">
+            <ul>
+              <li>
+                <ngx-skeleton-loader
+                  count="1"
+                  appearance="line"
+                  class="text-black font-semibold "
+                  [theme]="{
+                  'width': '100%',
+                  'height': '20px',
+                  'border-radius': '4px',
+                  'margin-bottom': '10px',
+                   'background-color': '#000000'
+                }">
+                </ngx-skeleton-loader>
+                <ngx-skeleton-loader
+                  count="1"
+                  appearance="line"
+                  class="text-black font-semibold "
+                  [theme]="{
+                  'width': '100%',
+                  'height': '20px',
+                  'border-radius': '4px',
+                  'margin-bottom': '10px',
+                }">
+                </ngx-skeleton-loader>
+              </li>
+              <li>
+                <ngx-skeleton-loader
+                  count="1"
+                  appearance="line"
+                  class="text-black font-semibold "
+                  [theme]="{
+                  'width': '100%',
+                  'height': '20px',
+                  'border-radius': '4px',
+                  'margin-bottom': '10px',
+                   'background-color': '#000000'
+                }">
+                </ngx-skeleton-loader>
+                <ngx-skeleton-loader
+                  count="1"
+                  appearance="line"
+                  class="text-black font-semibold "
+                  [theme]="{
+                  'width': '100%',
+                  'height': '20px',
+                  'border-radius': '4px',
+                  'margin-bottom': '10px',
+                }">
+                </ngx-skeleton-loader>
+              </li>
+              <li>
+                <ngx-skeleton-loader
+                  count="1"
+                  appearance="line"
+                  class="text-black font-semibold "
+                  [theme]="{
+                  'width': '100%',
+                  'height': '20px',
+                  'border-radius': '4px',
+                  'margin-bottom': '10px',
+                   'background-color': '#000000'
+                }">
+                </ngx-skeleton-loader>
+                <ngx-skeleton-loader
+                  count="1"
+                  appearance="line"
+                  class="text-black font-semibold "
+                  [theme]="{
+                  'width': '100%',
+                  'height': '20px',
+                  'border-radius': '4px',
+                  'margin-bottom': '10px',
+                }">
+                </ngx-skeleton-loader>
+              </li>
+              <li>
+                <ngx-skeleton-loader
+                  count="1"
+                  appearance="line"
+                  class="text-black font-semibold "
+                  [theme]="{
+                  'width': '100%',
+                  'height': '20px',
+                  'border-radius': '4px',
+                  'margin-bottom': '10px',
+                   'background-color': '#000000'
+                }">
+                </ngx-skeleton-loader>
+                <ngx-skeleton-loader
+                  count="1"
+                  appearance="line"
+                  class="text-black font-semibold "
+                  [theme]="{
+                  'width': '100%',
+                  'height': '20px',
+                  'border-radius': '4px',
+                  'margin-bottom': '10px',
+                }">
+                </ngx-skeleton-loader>
+              </li>
+            </ul>
+          </div>
+        </div>
+      }
+    </div>
+  }
 
 
 </section>

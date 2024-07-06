@@ -8,11 +8,13 @@ import {Designs} from "../common/degings";
 })
 export class EdService {
 
-  private URI = 'http://localhost:3000/ed-designs';
+  private URI = 'https://escriba-designs-back.vercel.app/ed-designs';
+
   constructor(private http: HttpClient) { }
 
   getDesigns(): Observable<Designs>{
     return this.http.get<Designs>(this.URI);
   }
+
 
 }
