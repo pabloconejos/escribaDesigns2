@@ -1,27 +1,48 @@
-# EscribaDesigns2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+<h1 align="center">
+  <br>
+  <a href="https://escribadesigns-d7b17.web.app/galeria"><img 
+    src="./src/assets/logos/logo_ed.png" alt="Icono Spotify" width="200"></a>
+  <br>
+  ESCRIBA DESIGNS
+  <br>
+</h1>
 
-## Development server
+<h4 align="center">A website for a graphic designer</h4>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#credits">Credits</a> •
+</p>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![screenshot](./templatemns.png)
 
-## Build
+## Key Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* You can see Escriba´s designs
+* You can text Escriba by email
 
-## Running unit tests
+## Credits
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This software uses the following open source packages:
 
-## Running end-to-end tests
+- [Angular](https://angular.io/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Nodejs](https://nodejs.org/en/)
+- [Nestjs](https://nestjs.com/)
+- [Turso](https://turso.tech/)
+- [Escriba](https://www.instagram.com/escribadesigns/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Related
 
-## Further help
+[https://escribadesigns-d7b17.web.app/galeria](https://escribadesigns-d7b17.web.app/galeria) - Web version of Escrinba Designs
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+> GitHub [@pabloconejos](https://github.com/pabloconejos) &nbsp;&middot;&nbsp;
+> Twitter [@konezk_](https://twitter.com/konezk_)
+> Instagram [@alivezk_](https://www.instagram.com/alivezk_/)
+> Linkedin [Pablo Conejos](www.linkedin.com/in/pablo-conejos-chirivella-145024252)
+
+
